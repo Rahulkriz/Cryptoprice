@@ -32,31 +32,36 @@ function App() {
   return (
     <div className="coin-app">
       <div className="coin-search">
-        <h1 className="coin-text">Search a Currency</h1>
-
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-            className="coin-input"
-            onChange={handlechange}
-          />
-        </form>
+        <div>
+          <h1 className="coin-text">Search a Currency</h1>
+        </div>
+        <div>
+          <form>
+            <input
+              type="text"
+              placeholder="Search"
+              className="coin-input"
+              onChange={handlechange}
+            />
+          </form>
+        </div>
       </div>
-      {filteredcoins.map((coin) => {
-        return (
-          <Coin
-            key={coin.id}
-            name={coin.name}
-            image={coin.image}
-            symbol={coin.symbol}
-            marketCap={coin.market_cap}
-            price={coin.current_price}
-            priceChange={coin.price_change_percentage_24h}
-            volume={coin.total_volume}
-          />
-        );
-      })}
+      <div className="container">
+        {filteredcoins.map((coin) => {
+          return (
+            <Coin
+              key={coin.id}
+              name={coin.name}
+              image={coin.image}
+              symbol={coin.symbol}
+              marketCap={coin.market_cap}
+              price={coin.current_price}
+              priceChange={coin.price_change_percentage_24h}
+              volume={coin.total_volume}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
