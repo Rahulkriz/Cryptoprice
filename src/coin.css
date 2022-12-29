@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  height: 20vh;
+  height: 25vh;
   border-bottom: 1px solid #d7d7d7;
   width: 80vw;
 }
@@ -29,7 +29,7 @@
 .coin img {
   height: 15%;
   width: 15%;
-  /* padding-right: 5%; */
+  padding-right: 5%;
 }
 
 .coin-symbol {
@@ -45,7 +45,7 @@
 }
 
 .coin-price {
-  width: 110px;
+  width: 110px
 }
 
 .coin-volume {
